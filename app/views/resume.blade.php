@@ -29,14 +29,14 @@
 		<li><a href="#service">Services</a></li>
 		<li><a href="#contact">Contact</a></li>
         <li><a href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a></li>
-        <li class="dropdown">
+{{--         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="#">Example menu</a></li>
             <li><a href="#">Example menu</a></li>
             <li><a href="#">Example menu</a></li>
           </ul>
-        </li>
+        </li> --}}
       </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -95,9 +95,7 @@
 				</div>
             </div>
         </div>		
-			<div class="boxed-grey">
-            	<p class="subtitle">A native Texan </p>
-			</div>
+            	<p class="subtitle">As a native Texan, Sakib's world is rich and full of different experiences. A natural born leader </p>
 		</div>
 	</section>
 	<!-- /Section: about -->
@@ -135,8 +133,8 @@
 						<img src="img/icons/service-icon-1.png" alt="" />
 					</div>
 					<div class="service-desc">
-						<h5>Branding</h5>
-						<p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
+						<h5>Social Media Marketing</h5>
+						<p>Explore the importance of generating unpaid web-traffic to your website. The right setup can be all the marketing you ever need.</p>
 					</div>
                 </div>
 				</div>
@@ -174,7 +172,7 @@
 						<img src="img/icons/service-icon-4.png" alt="" />
 					</div>
 					<div class="service-desc">
-						<h5>Public Relations</h5>
+						<h5>Branding</h5>
 						<p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
 					</div>
                 </div>
