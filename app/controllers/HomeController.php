@@ -42,11 +42,24 @@ class HomeController extends BaseController {
 		return View::make('resume');
 	}
 
+	// public function showIndex()
+	// {
+	// 	return View::make('index');
+	// }
+
+	public function showShow()
+	{
+		return View::make('show');
+	}
 	public function showPortfolio()
 	{
 		return View::make('portfolio');
 	}
 
+	public function showBlog()
+	{
+		// return View::make('index');
+	}
 	public function showForm()
 	{
 		return View::make('testform');

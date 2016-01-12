@@ -27,6 +27,7 @@
         <li class="active"><a href="#intro">Home</a></li>
         <li><a href="#about">About Me</a></li>
 		<li><a href="#service">Services</a></li>
+		<li><a href="/posts">Blog</a></li>
 		<li><a href="#contact">Contact</a></li>
         <li><a href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a></li>
 {{--         <li class="dropdown">
@@ -89,13 +90,13 @@
                     <div class="inner">
 						<h5>Sakib Shaikh</h5>
                         <p class="subtitle">Maestro</p>
-                        <div class="avatar"><img src="img/team/pic1.jpg" alt="" class="img-responsive img-circle" />/div>
+                        <div class="avatar"><img src="img/team/pic1.jpg" alt="" class="img-responsive img-circle">
                     	</div>
                 	</div>
 				</div>
             </div>
         </div>		
-            	<p class="subtitle">As a native Texan, Sakib's world is rich and full of different experiences. A natural born leader </p>
+            	<p class="subtitle">As a native Texan, Sakib's world is rich and full of different experiences. A natural born explorer, Sakib was part of a once-in-a-lifetime opportunity to study abroad through the Semester-at-Sea program. He studied in Mexico, Japan, China, Vietnam, Burma, India, Egypt, Turkey, Croatia, and Spain.</p>
 		</div>
 	</section>
 	<!-- /Section: about -->
@@ -147,7 +148,7 @@
 					</div>
 					<div class="service-desc">
 						<h5>Web Design</h5>
-						<p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
+						<p>A beautiful web design is mandatory in todays economy. My team can create a world class web site for your company with any functionality open to the public, giving your company, regardless of its size, international appeal in todays global economy.</p>
 					</div>
                 </div>
 				</div>
@@ -160,7 +161,7 @@
 					</div>
 					<div class="service-desc">
 						<h5>Business Planning</h5>
-						<p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
+						<p>Have an idea but don't know where to begin? Let's talk! My team can help you plan a roadmap to success beginning with an idea, and from there we can extract more information until a final product or service comes to life.</p>
 					</div>
                 </div>
 				</div>
@@ -173,7 +174,7 @@
 					</div>
 					<div class="service-desc">
 						<h5>Branding</h5>
-						<p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
+						<p>Become the next big thing with a successfull branding plan. In todays global economy, your product can end up anywhere from California to Malaysia, you need to know how to brand your company to generate mass appeal, and that requires branding expertise.</p>
 					</div>
                 </div>
 				</div>

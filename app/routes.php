@@ -25,16 +25,36 @@ Route::resource('/posts', 'PostsController');
 
 Route::get('orm-test', function()
 {
+	// Deleting
+	// $post1 = Post::find(10);
+	// $post1->delete();
+
+	// Show All
+	// $post1 = Post::all();
+	// dd($post1);
+	// loop through to show each
+
+	// Show
+	// $post1 = Post::find(11);
+	// echo $post1->title;
+	// echo $post1->content;
+
+
+	// Saving/Store
 	// $post1 = new Post();
 	// $post1->user_id = 1;
 	// $post1->title = 'Eloquent is awesome!';
 	// $post1->content  = 'It is super easy to create a new post.';
+	// $post1->user_id = 1;
 	// $post1->date = date('Y-m-d');
 	// $post1->image = '/img/h.jpg';
 	// $post1->save();
 
-	$post = Post::find(1);
-	return $post;
+	// Editing/Updating (update)
+	// $post = Post::find(8);
+	// $post->title = "Updated Title";
+	// $post->save();
+	// return $post;
 
 	// $post2 = new Post();
 	// $post2->title = 'Post number two';
