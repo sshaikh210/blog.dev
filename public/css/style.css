@@ -294,7 +294,9 @@ hr {
 .text-light {
 	color: #fff;
 }
-
+input,textarea {
+  color: #000;
+}
 
 
 /* ===========================

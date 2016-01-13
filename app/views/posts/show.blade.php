@@ -3,6 +3,7 @@
 @section('top-script')
 
 @section('content')
+
 <!-- Navigation -->
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
@@ -14,7 +15,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand" href="index.html">Sakib's Blog</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -35,6 +36,9 @@
                     <li>
                         <a href="/resume#contact">Contact</a>
                     </li>
+					<li>
+						<a href="/posts">Blog</a>
+					</li>
                     <li>
                     	<a href="/posts/create">Create Entry</a>
                     </li>
@@ -65,12 +69,16 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 					<p>{{{$post->content}}}</p>
-                </div>
-            </div>
-        </div>
+            <p>Post created at: {{{ $post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i:s A') }}}</p>
     </article>
-
-    <hr>
+					{{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'DELETE')) }}
+					<a href="{{{ action('PostsController@edit', $post->id) }}}" class="btn btn-info">Edit</a>
+					<button class="btn btn-danger">Delete Post</button>
+					{{ Form::close()}}
+	       		</div>
+			</div>
+		</div>
+	    <hr>
 
     <!-- Footer -->
     <footer>

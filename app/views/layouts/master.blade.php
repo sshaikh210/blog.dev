@@ -28,7 +28,12 @@
 </head>
 <body>
 	@yield('content')
-
+    @if (Session::has('successMessage'))
+        <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
+    @endif
+    @if (Session::has('errorMessage'))
+        <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
+    @endif
 	{{-- Script tags for jQuery and Bootstrap --}}
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>

@@ -32,9 +32,9 @@
                     <li>
                         <a href="/resume#contact">Contact</a>
                     </li>
-					<li>
-						<a href="/posts">Blog</a>
-					</li>
+                    <li>
+                        <a href="/posts">Blog</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -50,22 +50,20 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-						{{ Form::open(array('action' => 'PostsController@store')) }}
+                        {{ Form::model($post, array('action' => array('PostsController@update', $post->id), 'method' => 'PUT')) }}
 
-						  <div class="form-group {{ ($errors->has('title')) ? 'has-error' : '' }}">
-							{{ $errors->first('title', '<span class="help-block">:message</span>') }}
-							{{ Form::label('title', 'Title') }}
-						    {{ Form::text('title') }}
-						  </div>
+                          <div class="form-group {{ ($errors->has('title')) ? 'has-error' : '' }}">
+                            {{ $errors->first('title', '<span class="help-block">:message</span>') }}
+                            {{ Form::label('title', 'Title') }}
+                            {{ Form::text('title') }}
+                          </div>
 
-						  <div class="form-group">
-							{{ $errors->first('content', '<span class="help-block">:message</span>') }}
-							{{ Form::label('content', 'Content') }}
-						    <textarea rows="10" cols="50" type="text" class="form-control" id="body" value="{{{ Input::old('content') }}}" name="content">{{{ Input::old('content') }}}</textarea>
-						  </div>
-
-						  <button type="submit" class="btn btn-default">Submit</button>
-						{{ Form::close() }}
+                          <div class="form-group">
+                            {{ $errors->first('content', '<span class="help-block">:message</span>') }}
+                            {{ Form::label('content', 'Content') }}
+                            {{ Form::textarea('content', null, array('class'=>'form-control'))}}
+                          <button type="submit" class="btn btn-default">Submit</button>
+                        {{ Form::close() }}
                     </div>
                 </div>
             </div>

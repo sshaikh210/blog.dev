@@ -68,7 +68,13 @@
                 <div class="post-preview">
                     <a href="show">
 						<div class="container">
-							@foreach ($posts as $post)
+							    @if (Session::has('successMessage'))
+							        <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
+							    @endif
+							    @if (Session::has('errorMessage'))
+							        <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
+							    @endif
+								@foreach ($posts as $post)
 								<h1><a href="{{{ action('PostsController@show', $post->id) }}}">{{{ $post->title }}}</a></h1>
 								<p>{{{$post->content }}}</p>
 							@endforeach
@@ -78,11 +84,6 @@
                     
 	                <hr>
 	                <!-- Pager -->
-	                <ul class="pager">
-	                    <li class="next">
-	                        <a href="#">Older Posts &rarr;</a>
-	                    </li>
-	                </ul>
 	            </div>
 	        </div>
 	    </div>
