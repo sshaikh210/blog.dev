@@ -23,6 +23,18 @@ Route::get('/rolldice/{guess}', 'HomeController@rolleDile');
 
 Route::resource('/posts', 'PostsController');
 
+Route::get('login', 'HomeController@getLogin');
+
+Route::post('login', 'HomeController@postLogin');
+
+Route::get('logout', 'HomeController@getLogout');
+
+Route::get('/posts/search/{search}', 'PostsController@search');
+
+Route::get('/posts/my-posts/{username}', 'PostsController@showAuthorPosts');
+
+Route::resource('/posts', 'PostsController');
+
 Route::get('orm-test', function()
 {
 	// Deleting

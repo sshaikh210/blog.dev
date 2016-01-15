@@ -97,6 +97,12 @@ a:focus {
     color: #444;
 	text-transform: uppercase;
 	font-weight: 700;
+  padding-right:10px;
+  padding-left: 10px:;
+}
+
+.ul.nav li {
+
 }
 
 .navbar-custom.top-nav-collapse ul.nav li a {

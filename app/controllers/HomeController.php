@@ -70,4 +70,28 @@ class HomeController extends BaseController {
 		return Redirect::back()->withInput();
 	}
 
+	public function getLogin()
+	{
+		return View::make('login');
+	}
+
+		public function postLogin()
+	{
+		$username = Input::get('username');
+		$password = Input::get('password');
+
+		if (Auth::attempt(array('username' => $username, 'password' => $password))) {
+		    return Redirect::intended('/posts');
+		} else {
+		    // login failed, go back to the login screen
+		    Session::flash('errorMessage', 'Login Failed!');
+		    return Redirect::back();
+		}
+	}
+
+		public function getLogout()
+	{
+		Auth::logout();
+		return Redirect::action('PostsController@index');	
+	}
 }
