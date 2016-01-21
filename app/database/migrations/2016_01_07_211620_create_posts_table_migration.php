@@ -34,6 +34,8 @@ class CreatePostsTableMigration extends Migration {
 			$table->dropForeign('posts_user_id_foreign');
 			$table->dropColumn('user_id');
 		});
+
+		Schema::drop('posts');
 	}
 
 }

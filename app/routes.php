@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@showWelcome');
+Route::get('/', 'HomeController@showResume');
 
 Route::get('/resume', 'HomeController@showResume');
 
@@ -84,4 +84,6 @@ Route::get('/session/{value}', function ($value){
 
 Route::get('/session', function(){
 	return Session::all();
+
+Route::resource('tags', 'TagsController');
 });

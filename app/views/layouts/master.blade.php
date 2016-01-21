@@ -41,13 +41,13 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#intro">Home</a></li>
-        <li><a href="/resume">Resume</a></li>
+        <li><a href="/resume#intro">Home</a></li>
+        <li><a href="{{{ action('HomeController@showResume') }}}">Resume</a></li>
         <li><a href="/resume#about">About Me</a></li>
         <li><a href="/resume#service">Services</a></li>
-        <li><a href="/posts">Blog</a></li>
+        <li><a href="/resume#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a></li>
+        <li><a href="/posts">Blog</a></li>
         @if (Auth::user())
         <li><a href="{{{ action('HomeController@getLogout')}}}">Log Out</a></li>
         <li><a href="{{{ action('PostsController@create')}}}">Create Post</a></li>
@@ -68,6 +68,8 @@
         </div>
         <!-- /.container -->
     </nav>
+
+
 	@yield('content')
 	{{-- Script tags for jQuery and Bootstrap --}}
     <script src="/js/jquery.min.js"></script>
